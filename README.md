@@ -1,0 +1,2 @@
+# Hazifeldat
+Gyakoroljuk sokat
