@@ -130,6 +130,43 @@ def feladat_15(a,b):
         a=a-b
     print(hanyados)
     
+def feladat_16(a,b):
+    while True:
+        r=a%b
+        a=b
+        b=r
+        if r==0:
+            break
+    return a
+
+def feladat_17(x):
+    masolat=x
+    uj_szam=0
+    while x!=0:
+        szamjegy=x%10
+        uj_szam=(uj_szam*10)+szamjegy
+        x=x//10
+    return uj_szam==masolat
+
+def feladat_19(n):
+    if n<2:
+        return False
+    else:
+        for i in range(2,n):
+            if n%i==0:
+                return False
+        return True
+    
+def feladat_20(n):
+    a=1
+    b=1
+    k=1
+    while k<n:
+        print('%.4f'%(a/b), end=', ')
+        a=a+b
+        b=a-b
+        k+=1
+    
 
 def main():
     feladat_1(5,2)
@@ -145,5 +182,9 @@ def main():
     feladat_13(3)
     feladat_14(8)
     feladat_15(520,104)
+    print(feladat_16(360, 225))
+    print(feladat_17(353))
+    print(feladat_19(5))
+    feladat_20(5)
 if __name__ == '__main__':
     main()
