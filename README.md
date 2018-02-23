@@ -1,2 +1,2 @@
 # Hazifeldat
-Gyakoroljuk sokat
+Kolozsi Éva Szabina, PTBTCV
