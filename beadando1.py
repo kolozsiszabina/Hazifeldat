@@ -169,7 +169,6 @@ def feladat_20(n):
         b=a-b
         k+=1
 
-
 def main():
     feladat_1(5,2)
     feladat_2()
