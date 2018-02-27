@@ -168,6 +168,37 @@ def feladat_20(n):
         a=a+b
         b=a-b
         k+=1
+        
+def feladat_21(n):
+    ujszam=0
+    while n!=0:
+        maradek=n%10
+        ujszam=(ujszam*10)+maradek
+        n=n//10
+    return ujszam
+
+def feladat_24():
+    s=0
+    k=0
+    szam = int(input('Adj meg egy szamot:'))
+    while szam!=0:
+        szam=int(input('Adj meg egy szamot:'))
+        if szam%7==5:
+            s+=1
+        elif szam%13==7:
+            k+=1
+    print('s=', s, 'k=', k)
+    
+def feladat_25():
+    lakossag=input('A lakkosag szama (fo):')
+    terulet=('Az orszag terulete negyzet kilometerben:')
+    suruseg=lakossag/terulet
+    if suruseg<50:
+        print('Ritkan lakott.')
+    elif suruseg<300 and suruseg>50:
+        print('Atlagos lakossag.')
+    elif suruseg>300:
+        print('Surun lakott.')
 
 def main():
     feladat_1(5,2)
@@ -187,5 +218,8 @@ def main():
     print(feladat_17(353))
     print(feladat_19(5))
     feladat_20(5)
+    print(feladat_21(3659824157))
+    feladat_24()
+    feladat_25()
 if __name__ == '__main__':
     main()
