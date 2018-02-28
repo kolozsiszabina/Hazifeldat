@@ -215,95 +215,6 @@ def feladat_25():
     elif suruseg>300:
         print('Surun lakott.')
         
-def feladat_26():
-   s=0
-   negativdb=0
-   pozitivdb=0
-   szam = float(input('Adj meg egy szamot:'))
-   while szam!=0:
-       szam=float(input('Adj meg egy szamot:'))
-       s += szam
-       print(s)
-       if szam<0:
-           negativdb+=1
-       elif szam>0:
-           pozitivdb+=1
-   print(('Pozitiv:', pozitivdb, ('Negativ:', negativdb)))
-
-def feladat_27():
-    negativdb=0
-    pozitivdb=0
-    while True:
-        szam=int(input('Adj meg egy szamot:'))
-        szam1=int(input('Adj meg egy szamot:'))
-        if szam<0 and szam1>0 or szam>0 and szam1<0:
-            if szam>0 or szam1>0:
-                pozitivdb+=1
-            elif szam<0 or szam1<0:
-                negativdb+=1
-        else:
-            break
-    print('Negativ:', negativdb, 'Pozitiv:', pozitivdb)
-    
-def feladat_28(n):
-    li=[]
-    for i in range(n):
-        ertek=i**2
-        if ertek<n:
-            li.append(ertek)
-    print(li[-1])
-
-def feladat_29(n):
-    if n == 0:
-        return 1
-    if n == 1:
-        return 1
-    return n*feladat_29(n-1)
-
-def feladat_30():
-    ev=int(input('Add meg az evet:'))
-    honap=int(input('Add meg a honap szamat:'))
-    nap=int(input('Add meg a napot:'))
-    osszeg=(honap*30)+nap
-    print(osszeg)
-    
-def feladat_31(n):
-    li=[]
-    for i in range(1,n+1):
-        if n/i==0:
-            li.append(i)
-    print(li)
-    
-def feladat_32(k):
-    lista1=[]
-    n1=int(input('Adj meg egy also korlatot:'))
-    n2=int(input('Adj meg egy felso korlatot:'))
-    for i in range(n1,n2+1):
-        if (i/k==0):
-            lista1.append(i)
-    print(lista1)
-    
-def feladat_35(n):
-    def Prim(szam1):
-        oszt = 2
-        while oszt <= szam1 / 2:
-            if szam1 % oszt == 0:
-                return False
-            oszt += 1
-        return True
-    for i in range(0, n):
-        szam1 = i
-        szam2 = i + 2
-        if Prim(szam1) and Prim(szam2):
-            print("(", szam1, ",", szam2, ")")
-            
-def feladat_38():
-    s=0
-    szamjegy=(input('Adj meg egy kilenc szambol allo szamjegyet:'))
-    szam=(input('Adj meg egy szamot:'))
-    for szam in szamjegy:
-        if szam in szamjegy:
-            s+=1
 
     print(s)
 def main():
@@ -328,14 +239,5 @@ def main():
     print(feladat_21(3659824157))
     feladat_24()
     feladat_25()
-    feladat_26()
-    feladat_27()
-    feladat_28(25)
-    print(feladat_29(5))
-    feladat_30()
-    feladat_31(100)
-    feladat_32(5)
-    feladat_35(5)
-    print(feladat_38())
 if __name__ == '__main__':
     main()
