@@ -150,6 +150,21 @@ def feladat_17(x):
         x=x//10
     return uj_szam==masolat
 
+def feladat_18():
+    x=45
+    y=17
+    p=0
+    while y != 0:
+        if (y % 2 != 0):
+            p = p + x
+            x = x * 2
+            y = y // 2
+        if (y % 2 == 0):
+            x = x * 2
+            y = y // 2
+
+    print(p)
+
 def feladat_19(n):
     if n<2:
         return False
@@ -200,6 +215,7 @@ def feladat_25():
     elif suruseg>300:
         print('Surun lakott.')
         
+
 def feladat_26():
    s=0
    negativdb=0
@@ -290,6 +306,8 @@ def feladat_38():
         if szam in szamjegy:
             s+=1
 
+
+    print(s)
 def main():
     feladat_1(5,2)
     feladat_2()
@@ -306,6 +324,7 @@ def main():
     feladat_15(520, 104)
     print(feladat_16(360, 225))
     print(feladat_17(353))
+    feladat_18()
     print(feladat_19(5))
     feladat_20(5)
     print(feladat_21(3659824157))
