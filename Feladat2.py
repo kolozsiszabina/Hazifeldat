@@ -16,6 +16,26 @@ def feladat_2(n):
                 s+=1
         if s==2:
             print(i, end=',')
+def feladat_3(n):
+    for i in range(1,n):
+        ketto_hatvany=2**i
+        if ketto_hatvany>=n:
+            break
+    if n<=ketto_hatvany:
+        return ketto_hatvany
+def osztok_szama(szam):
+    db=2
+    for i in range(2, (szam//2)+1):
+        if szam%i==0:
+            db+=1
+    return db
+
+def feladat_5(n):
+    max=1
+    for i in range(2,n):
+        if max<osztok_szama(i):
+            max=osztok_szama(i)
+            print(i)
 def feladat_8(n):
     m = 0
     db = 0
@@ -45,6 +65,8 @@ def feladat_10():
 def main():
     print(feladat_1(8))
     feladat_2(11)
+    print(feladat_3(7))
+    feladat_5(38)
     feladat_8(8)
     feladat_10()
 
