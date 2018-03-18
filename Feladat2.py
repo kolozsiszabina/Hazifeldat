@@ -58,6 +58,84 @@ def feladat_10():
         fajl.close()
     except Exception as e:
         print(e)
+def feladat_11():
+    try:
+        fajl=open('be.txt', mode='r')
+        min=50
+        for sor in fajl:
+            sor=sor.strip()
+            if sor[-1]=='.' or sor[-1]=='?' or sor[-1]=='!' and len(sor)<min:
+                min=len(sor)
+        print(min-1)
+        fajl.close()
+    except Exception as e:
+        print(e)
+def feladat_15():
+    try:
+        fajl=open('be.txt', mode='r')
+        for sor in fajl:
+            if sor!='':
+                fajl2=open('ki.txt', mode='w')
+                sor.strip()
+                fajl2.write(sor)
+        fajl2.close()
+        fajl.close()
+    except Exception as e:
+        print(e)
+def feladat_16():
+    try:
+        fajl=open('be1.txt', mode='r')
+        for sor in fajl:
+            sor=sor.split(' ')
+            if sor[1].isupper():
+                fajl=open('ki.txt', mode='w')
+                fajl.write(sor)
+                fajl.close()
+                break
+    except Exception as e:
+        print(e)
+def feladat_17():
+    try:
+        fajl=open('be.txt', mode='r')
+        for sor in fajl:
+            szavak=sor.split(' ')
+            szavak=str(szavak)
+            for szavak in sor:
+                if szavak.islower():
+                    fajl = open('ki.txt', mode='w')
+                    fajl.write(szavak)
+                    fajl.close()
+                    break
+    except Exception as e:
+        print(e)
+def feladat_20():
+    try:
+        fajl=open('be.txt', mode='r')
+        for sor in fajl:
+            sor=sor.split(';')
+            sor[2]=int(sor[2])
+            m=sor[2]
+            for i in sor[2]:
+                if sor[i]>m:
+                    m=sor[i]
+            return m
+        fajl.close()
+    except Exception as e:
+        print(e)
+def feladat_21():
+    try:
+        fajl=open('be.txt', mode='r')
+        for sor in fajl:
+            sor.strip()
+            sor.strip(';')
+            sor=int(sor)
+            s=0
+            for i in range(sor[1],):
+               s+=i
+        print(sor[0], s )
+        fajl.close()
+    except Exception as e:
+        print(e)
 
 
 
@@ -69,6 +147,12 @@ def main():
     feladat_5(38)
     feladat_8(8)
     feladat_10()
+    feladat_11()
+    feladat_15()
+    feladat_16()
+    feladat_17()
+    feladat_20()
+    feladat_21()
 
 if __name__ == '__main__':
     main()
